@@ -11,8 +11,8 @@ from openai import OpenAI
 # Load environment variables
 from dotenv import load_dotenv
 load_dotenv()
-openai_api_key = "sk-proj-E7W5MgpDtDgWjHynUQkZT3BlbkFJ3hzmYrTAImxG8PSxsHCc"
-serper_api_key = "134cfc9299469f74ef623e05e0bb3d60139c2860"
+openai_api_key = "api-key"
+serper_api_key = "api-key"
 
 
 os.environ["OPENAI_API_KEY"] = openai_api_key
