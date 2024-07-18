@@ -137,15 +137,18 @@ job_search_crew = Crew(
 
 def run_job_search(user_prompt):
     try:
+        # Parse user input and print results
         parsed_result = parse_user_input(user_prompt)
         print(f"Parsed Result: {parsed_result}")  # Debugging line
-        print(type(parsed_result))
 
-        result = job_search_crew.kickoff(inputs=parsed_result)
-        return result
+        # Start the job search task and yield results as they come
+        for result in job_search_crew.kickoff(inputs=parsed_result):
+            yield result  # Yield each result part to the frontend
+
     except Exception as e:
         print(f"An error occurred: {str(e)}")
-        return f"An error occurred while processing your request: {str(e)}"
+        yield f"An error occurred while processing your request: {str(e)}"  # Yield error message as part of the stream
+
 
 # Test the function if this file is run directly
 if __name__ == "__main__":
