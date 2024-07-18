@@ -150,8 +150,8 @@ def run_job_search(user_prompt):
         yield f"An error occurred while processing your request: {str(e)}"  # Yield error message as part of the stream
 
 
-# Test the function if this file is run directly
-if __name__ == "__main__":
-    test_prompt = "AI engineer roles in a genAI startup in Bangalore in the past 7 days"
-    result = run_job_search(test_prompt)
-    print(result)
+# Test the function if this file is run directly( un-comment this if an error arises)
+# if __name__ == "__main__":
+#     test_prompt = "AI engineer roles in a genAI startup in Bangalore in the past 7 days"
+#     result = run_job_search(test_prompt)
+#     print(result)
