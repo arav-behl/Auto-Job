@@ -1,5 +1,9 @@
 # backend.py
+__import__('pysqlite3')
+import sys
+sys.modules['sqlite3'] = sys.modules.pop('pysqlite3')
 
+# Rest of your imports and code...
 import os
 import json
 from datetime import datetime, timedelta
