@@ -1,6 +1,6 @@
 streamlit>=1.36.0,<2.0.0
-python-dotenv>=0.19.0,<1.0.0
 PyPDF2>=2.0.0,<3.0.0
 crewai>=0.36.1,<0.37.0
 openai>=1.13.3,<2.0.0
 crewai-tools>=0.1.0,<1.0.0
+python-dotenv>=1.0.0,<2.0.0
